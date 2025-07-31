@@ -15,16 +15,16 @@ namespace Microsoft.Xna.Framework
     [DataContract]
     [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct BoundingBox : IEquatable<BoundingBox>
-{
+    {
 
-            #region Public Fields
-    
-            /// <summary>
-            ///   The minimum extent of this <see cref="BoundingBox"/>.
-            /// </summary>
-            [DataMember]
-            public Vector3 Min;
-      
+        #region Public Fields
+
+        /// <summary>
+        ///   The minimum extent of this <see cref="BoundingBox"/>.
+        /// </summary>
+        [DataMember]
+        public Vector3 Min;
+
         /// <summary>
         ///   The maximum extent of this <see cref="BoundingBox"/>.
         /// </summary>
@@ -317,7 +317,7 @@ namespace Microsoft.Xna.Framework
             var minVec = MaxVector3;
             var maxVec = MinVector3;
             for (int i = index; i < count; i++)
-            {                
+            {
                 minVec.X = (minVec.X < points[i].X) ? minVec.X : points[i].X;
                 minVec.Y = (minVec.Y < points[i].Y) ? minVec.Y : points[i].Y;
                 minVec.Z = (minVec.Z < points[i].Z) ? minVec.Z : points[i].Z;
@@ -486,10 +486,10 @@ namespace Microsoft.Xna.Framework
         public Vector3[] GetCorners()
         {
             return new Vector3[] {
-                new Vector3(this.Min.X, this.Max.Y, this.Max.Z), 
+                new Vector3(this.Min.X, this.Max.Y, this.Max.Z),
                 new Vector3(this.Max.X, this.Max.Y, this.Max.Z),
-                new Vector3(this.Max.X, this.Min.Y, this.Max.Z), 
-                new Vector3(this.Min.X, this.Min.Y, this.Max.Z), 
+                new Vector3(this.Max.X, this.Min.Y, this.Max.Z),
+                new Vector3(this.Min.X, this.Min.Y, this.Max.Z),
                 new Vector3(this.Min.X, this.Max.Y, this.Min.Z),
                 new Vector3(this.Max.X, this.Max.Y, this.Min.Z),
                 new Vector3(this.Max.X, this.Min.Y, this.Min.Z),
@@ -783,7 +783,7 @@ namespace Microsoft.Xna.Framework
             {
                 return string.Concat(
                     "Min( ", this.Min.DebugDisplayString, " )  \r\n",
-                    "Max( ",this.Max.DebugDisplayString, " )"
+                    "Max( ", this.Max.DebugDisplayString, " )"
                     );
             }
         }
