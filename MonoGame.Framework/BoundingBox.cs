@@ -15,15 +15,15 @@ namespace Microsoft.Xna.Framework
     [DataContract]
     [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct BoundingBox : IEquatable<BoundingBox>
-{
+    {
 
-            #region Public Fields
-    
-            /// <summary>
-            ///   The minimum extent of this <see cref="BoundingBox"/>.
-            /// </summary>
-            [DataMember]
-            public Vector3 Min;
+        #region Public Fields
+
+        /// <summary>
+        ///   The minimum extent of this <see cref="BoundingBox"/>.
+        /// </summary>
+        [DataMember]
+        public Vector3 Min;
 
         /// <summary>
         ///   The maximum extent of this <see cref="BoundingBox"/>.
